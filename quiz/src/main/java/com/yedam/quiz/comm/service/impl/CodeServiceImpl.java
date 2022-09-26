@@ -13,17 +13,19 @@ import com.yedam.quiz.comm.service.CodeVO;
 import com.yedam.quiz.comm.service.GridData;
 
 @Service
-public class CodeServiceImpl implements CodeService{
+public class CodeServiceImpl implements CodeService {
 
-	@Autowired CodeMapper mapper;
-	
+	@Autowired
+	CodeMapper mapper;
+
 	@Override
 	public CodeVO getCode(CodeVO codeVO) {
 		return mapper.getCode(codeVO);
 	}
 
-	//하나의 그룹코드에 대한 상세코드 조회
+	// 하나의 그룹코드에 대한 상세코드 조회
 	public List<CodeVO> getCodeList(CodeVO codeVO) {
+		System.out.println("serviceImpl=> " + codeVO);
 		return mapper.getCodeList(codeVO);
 	}
 
@@ -36,43 +38,43 @@ public class CodeServiceImpl implements CodeService{
 	public void updateCode(CodeVO codeVO) {
 		mapper.updateCode(codeVO);
 	}
-	
+
 	@Override
 	public void deleteCode(CodeVO codeVO) {
 		mapper.deleteCode(codeVO);
 	}
-	
-	//여러 그룹코드들의 상세코드 조회
+
+	// 여러 그룹코드들의 상세코드 조회
 	@Override
-	public Map<String, List<CodeVO>> getCodes(String ... gpCdlist) { 
+	public Map<String, List<CodeVO>> getCodes(String... gpCdlist) {
 		Map<String, List<CodeVO>> map = new HashMap<String, List<CodeVO>>();
-		for(String gpCd : gpCdlist) {
+		for (String gpCd : gpCdlist) {
 			map.put(gpCd, mapper.getCodeList(new CodeVO(gpCd)));
 		}
 		return map;
 	}
-	
-	//그룹코드 조회
-    public List<CodeVO> getGpCodeList(CodeVO codeVO){	
-    	return mapper.getGpCodeList(codeVO);
-    }
-    
-    //코드 수정
-    public void updateCodeData(GridData<CodeVO> data) {
-    	if (data.getCreatedRows() != null) {
-    		for(CodeVO vo   : data.getCreatedRows()) {
-    			mapper.insertCode(vo);
-    		}
-    	}
-    	if (data.getDeletedRows() != null) {
-    		for(CodeVO vo   : data.getDeletedRows()) {
-    			mapper.deleteCode(vo);
-    		}
-    	}
-    	if (data.getUpdatedRows() != null) {
-    		for(CodeVO vo   : data.getUpdatedRows()) {
-    			mapper.updateCode(vo);
-    		}
-    	}    	
-    }
+
+	// 그룹코드 조회
+	public List<CodeVO> getGpCodeList(CodeVO codeVO) {
+		return mapper.getGpCodeList(codeVO);
+	}
+
+	// 코드 수정
+	public void updateCodeData(GridData<CodeVO> data) {
+		if (data.getCreatedRows() != null) {
+			for (CodeVO vo : data.getCreatedRows()) {
+				mapper.insertCode(vo);
+			}
+		}
+		if (data.getDeletedRows() != null) {
+			for (CodeVO vo : data.getDeletedRows()) {
+				mapper.deleteCode(vo);
+			}
+		}
+		if (data.getUpdatedRows() != null) {
+			for (CodeVO vo : data.getUpdatedRows()) {
+				mapper.updateCode(vo);
+			}
+		}
+	}
 }

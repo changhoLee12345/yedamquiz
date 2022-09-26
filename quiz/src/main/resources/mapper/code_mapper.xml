@@ -15,7 +15,7 @@
 	<select id="getCodeList" resultType="CodeVO">
 		SELECT  *
 		  FROM COMMON
-		 WHERE GP_CD = #{gpCd}
+		 WHERE GP_CD = nvl(#{gpCd}, 'SBJT')
 		 ORDER BY NM
 	</select>
 
