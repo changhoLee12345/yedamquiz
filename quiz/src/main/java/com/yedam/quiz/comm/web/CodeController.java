@@ -32,7 +32,6 @@ public class CodeController {
 	@ResponseBody
 	@GetMapping("/codeGroup")
 	public Map<String, Object> codeGroup(Model model, CodeVO vo) {
-
 		/*
 		 * { "result": true, "data": { "contents": [],
 		 */
