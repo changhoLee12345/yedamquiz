@@ -61,6 +61,7 @@ public class CodeServiceImpl implements CodeService {
 
 	// 코드 수정
 	public void updateCodeData(GridData<CodeVO> data) {
+		System.out.println("imple+_+++" + data);
 		if (data.getCreatedRows() != null) {
 			for (CodeVO vo : data.getCreatedRows()) {
 				mapper.insertCode(vo);

@@ -15,20 +15,23 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 @Controller
 @SpringBootApplication
 public class QuizApplication {
-    private static final Logger log = LoggerFactory.getLogger(QuizApplication.class);
-    public static void main(String[] args) {
-        SpringApplication.run(QuizApplication.class, args);
-    }
-    
-    @Bean
-    public LocaleResolver localeResolver() {
-    	SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
-    	sessionLocaleResolver.setDefaultLocale(Locale.KOREA);
-    	return sessionLocaleResolver;
-    }
-    
-    @RequestMapping("/")
-    public String index() {
-    	return "index";
-    }
+
+	private static final Logger log = LoggerFactory.getLogger(QuizApplication.class);
+
+	public static void main(String[] args) {
+		SpringApplication.run(QuizApplication.class, args);
+	}
+
+	@Bean
+	public LocaleResolver localeResolver() {
+		SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
+		sessionLocaleResolver.setDefaultLocale(Locale.KOREA);
+		return sessionLocaleResolver;
+	}
+
+	@RequestMapping("/")
+	public String index() {
+		return "index";
+	}
+
 }

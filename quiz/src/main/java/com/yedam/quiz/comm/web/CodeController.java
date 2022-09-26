@@ -57,7 +57,9 @@ public class CodeController {
 	@ResponseBody
 	@PutMapping("/codeUpdagte")
 	public Map<String, Object> codeUpdate(@RequestBody GridData<CodeVO> data) {
+		System.out.println(data);
 		codeService.updateCodeData(data);
+
 		return null;
 	}
 
