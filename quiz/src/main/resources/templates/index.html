@@ -1,14 +1,42 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout/layout}">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+      <meta charset="UTF-8">
+      <title>Insert title here</title>
+      <style>
+            ul {
+                  list-style-type: none;
+            }
+      </style>
 </head>
+
 <body>
-<th:block layout:fragment="content">
-예담퀴즈
-</th:block>
+      <th:block layout:fragment="content">
+            <h3>예담퀴즈</h3>
+            <ul>
+                  <h4>기초자료</h4>
+                  <li><a href="">코드관리</a></li>
+                  <li><a href="">과정등록</a></li>
+                  <li><a href="">학생관리</a></li>
+            </ul>
+            <ul>
+                  <h4>문제은행</h4>
+                  <li><a href="">문제등록</a></li>
+                  <li><a href="">문제관리</a></li>
+            </ul>
+            <ul>
+                  <h4>시험지관리</h4>
+                  <li><a href="">시험지등록</a></li>
+                  <li><a href="">시험지관리</a></li>
+            </ul>
+            <ul>
+                  <h4>통계관리</h4>
+                  <li><a href="">문제별 통계 메인</a></li>
+                  <li><a href="">문제별 통계 상세</a></li>
+            </ul>
+      </th:block>
 </body>
+
 </html>
