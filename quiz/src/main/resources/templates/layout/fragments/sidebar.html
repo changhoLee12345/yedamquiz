@@ -3,7 +3,7 @@
 <th:block th:fragment="sidebarFragment">
 	<div class="sb-sidenav-menu">
 		<div class="nav">
-<!--					
+			<!--					
 			<div class="sb-sidenav-menu-heading">샘플</div>
 			<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
 				data-bs-target="#collapseLayouts" aria-expanded="false"
@@ -22,13 +22,13 @@
 					<a class="nav-link" href="insertFormEmp">사원등록</a>
 				</nav>
 			</div>
--->		
+-->
 			<div class="sb-sidenav-menu-heading">기초자료</div>
 			<a class="nav-link" href="codeList">
 				<div class="sb-nav-link-icon">
 					<i class="fas fa-tachometer-alt"></i>
 				</div> 코드관리
-			</a>			
+			</a>
 			<a class="nav-link" href="registerCourse">
 				<div class="sb-nav-link-icon">
 					<i class="fas fa-tachometer-alt"></i>
@@ -39,7 +39,7 @@
 					<i class="fas fa-tachometer-alt"></i>
 				</div> 학생관리
 			</a>
-			
+
 			<div class="sb-sidenav-menu-heading">문제은행</div>
 			<a class="nav-link" href="/quizReg">
 				<div class="sb-nav-link-icon">
@@ -51,7 +51,7 @@
 					<i class="fas fa-tachometer-alt"></i>
 				</div> 문제관리
 			</a>
-			
+
 			<div class="sb-sidenav-menu-heading">시험지관리</div>
 			<a class="nav-link" href="examRegistForm">
 				<div class="sb-nav-link-icon">
@@ -63,7 +63,7 @@
 					<i class="fas fa-tachometer-alt"></i>
 				</div> 시험지관리
 			</a>
-			
+
 			<div class="sb-sidenav-menu-heading">통계관리</div>
 			<a class="nav-link" href="/staticsByQuiz">
 				<div class="sb-nav-link-icon">
@@ -76,9 +76,8 @@
 				</div> 문제별 통계 상세
 			</a>
 
-			<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-				data-bs-target="#collapsePages" aria-expanded="false"
-				aria-controls="collapsePages">
+			<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages"
+				aria-expanded="false" aria-controls="collapsePages">
 				<div class="sb-nav-link-icon">
 					<i class="fas fa-book-open"></i>
 				</div> Pages
@@ -86,46 +85,41 @@
 					<i class="fas fa-angle-down"></i>
 				</div>
 			</a>
-			<div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
-				data-bs-parent="#sidenavAccordion">
-				<nav class="sb-sidenav-menu-nested nav accordion"
-					id="sidenavAccordionPages">
-					<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-						data-bs-target="#pagesCollapseAuth" aria-expanded="false"
-						aria-controls="pagesCollapseAuth"> Authentication
+			<div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+				<nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+					<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth"
+						aria-expanded="false" aria-controls="pagesCollapseAuth"> Authentication
 						<div class="sb-sidenav-collapse-arrow">
 							<i class="fas fa-angle-down"></i>
 						</div>
 					</a>
-					<div class="collapse" id="pagesCollapseAuth"
-						aria-labelledby="headingOne"
+					<div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
 						data-bs-parent="#sidenavAccordionPages">
 						<nav class="sb-sidenav-menu-nested nav">
-							<a class="nav-link" href="login.html">Login</a> <a
-								class="nav-link" href="register.html">Register</a> <a
-								class="nav-link" href="password.html">Forgot Password</a>
+							<a class="nav-link" href="login.html">Login</a>
+							<a class="nav-link" href="register.html">Register</a>
+							<a class="nav-link" href="password.html">Forgot Password</a>
 						</nav>
 					</div>
 					<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-						data-bs-target="#pagesCollapseError" aria-expanded="false"
-						aria-controls="pagesCollapseError"> Error
+						data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+						Error
 						<div class="sb-sidenav-collapse-arrow">
 							<i class="fas fa-angle-down"></i>
 						</div>
 					</a>
-					<div class="collapse" id="pagesCollapseError"
-						aria-labelledby="headingOne"
+					<div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
 						data-bs-parent="#sidenavAccordionPages">
 						<nav class="sb-sidenav-menu-nested nav">
-							<a class="nav-link" href="401.html">401 Page</a> <a
-								class="nav-link" href="404.html">404 Page</a> <a
-								class="nav-link" href="500.html">500 Page</a>
+							<a class="nav-link" href="401.html">401 Page</a>
+							<a class="nav-link" href="404.html">404 Page</a>
+							<a class="nav-link" href="500.html">500 Page</a>
 						</nav>
 					</div>
 				</nav>
 			</div>
-			
-<!-- 			<div class="sb-sidenav-menu-heading">Addons</div>
+
+			<!-- <div class="sb-sidenav-menu-heading">Addons</div>
 			<a class="nav-link" href="charts.html">
 				<div class="sb-nav-link-icon">
 					<i class="fas fa-chart-area"></i>
@@ -142,5 +136,6 @@
 		<div class="small">Logged in as:</div>
 		Start Bootstrap
 	</div>
-</th:block> 
-</html>                       
+</th:block>
+
+</html>
