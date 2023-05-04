@@ -25,17 +25,17 @@ public class CourseController {
 	@Autowired
 	CourseService service;
 
-	@RequestMapping("getCourse/{corsNo}")
+	@GetMapping("getCourse/{corsNo}")
 	public String getCourse(@PathVariable String corsNo, Model model, CorsVO courseVO) {
 		courseVO.setCorsNo(corsNo);
 		model.addAttribute("course", service.getCourse(courseVO));
 		return "course/getCourse";
 	}
 
-	@RequestMapping("courseList")
+	@GetMapping("courseList")
 	public String courseList(Model model, CorsVO courseVO) {
 		model.addAttribute("courseList", service.getCourseList(courseVO));
-		return "course/courseList";
+		return "course/getCourseList";
 	}
 
 	@GetMapping("registerCourse")
